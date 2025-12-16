@@ -1,42 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>DramaBox Mobile</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
-    <style>
-      /* Custom Scrollbar Hide */
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-      body {
-        background-color: #0f0f0f;
-        color: #ffffff;
-        -webkit-tap-highlight-color: transparent;
-      }
-    </style>
+<html class="dark" lang="en">
 
-<link rel="stylesheet" href="/index.css">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+  <title>DramaBox Mobile</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#ff3b30", // Reddish brand color based on DramaBox logo
+            "background-dark": "#121212",
+            "surface-dark": "#1e1e1e",
+            "text-dark": "#e5e7eb",
+            "subtext-dark": "#9ca3af",
+            "card-dark": "#2a2a2a",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "12px",
+            'xl': '16px',
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'shimmer': 'shimmer 2s linear infinite',
+          },
+          keyframes: {
+            shimmer: {
+              '0%': { backgroundPosition: '-1000px 0' },
+              '100%': { backgroundPosition: '1000px 0' }
+            }
+          }
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      background-color: #121212;
+      min-height: max(884px, 100dvh);
+    }
+
+    .shimmer-bg {
+      background: linear-gradient(to right, #2a2a2a 8%, #3a3a3a 18%, #2a2a2a 33%);
+      background-size: 1000px 100%;
+    }
+
+    /* Custom Scrollbar Hide */
+    ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+
+
   <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6"
-  }
-}
-</script>
-  <script type="module" crossorigin src="/assets/index-BlPgonkw.js"></script>
+    {
+      "imports": {
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+        "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6"
+      }
+    }
+    </script>
+  <script type="module" crossorigin src="/assets/index-T7GfFT2D.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-C8i3SYvI.css">
 <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
-  <body>
-    <div id="root"></div>
+
+<body>
+  <div id="root"></div>
 </body>
+
 </html>
